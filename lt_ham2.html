@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" value="bai1" onclick="alert(bai1(5))">
+    <input type="submit" value="bai2" onclick="bai2(6)">
+    <input type="submit" value="bai3" onclick="alert(bai3(7))">
+    <input type="submit" value="bai4" onclick="alert(bai4())">
+    <input type="submit" value="bai5" onclick="alert(bai5(9,-7,8))">
+    <input type="submit" value="bai6" onclick="alert(bai6(5))">
+    <input type="submit" value="bai7" onclick="alert(bai7(1,10))">
+    <input type="submit" value="bai8" onclick="alert(bai8([2,3,4,5]))">
+    <input type="submit" value="bai9" onclick="alert(bai9(['/','*','p','o','l','6','p'],'+'))">
+
+    <script>
+        const bai1 = (number) => {
+            return `Bình phương của ${number} là: ${number * number}`;
+        }
+
+        const bai2 = (radius) => {
+            alert(`Diện tích của hình tròn có r= ${radius} là:${Math.PI * radius ** 2}`);
+            alert(`Chu vi của hình tròn có r=${radius} là:${2 * Math.PI * radius}`);
+        }
+
+        const bai3 = (number) => {
+            let factorial;
+            if (number < 1) {
+                return `Khong ton tai giai thua cua ${number}`;
+            }
+            else if (number == 1) { return number }
+            else {
+                factorial = number * bai3(number - 1);
+                return factorial;
+            }
+        }
+
+        const bai4 = () => {
+            str = Number(prompt("nhap ki tu bat ki:"));
+            return (Number.isInteger(str)) ? true : false;
+        }
+
+        const bai5 = (number1, number2, number3) => {
+            return (number1 < number2 && number1 < number3) ? number1 : (number2 < number3) ? number2 : number3;
+        }
+
+        const bai6=(number) => {
+            return (number>0) ? true : false;
+        }
+
+        const bai7=(number1,number2) => {
+            let temp;
+            temp=number1;
+            number1=number2;
+            number2=temp;
+            return `number1: ${number1}   number2: ${number2}`;
+        }
+
+        const bai8=(arr) => {
+            return arr.reverse();
+        }
+
+        const bai9=(arr,str)=> {
+            let count=0;
+            let i;
+            for( i=0;i<arr.length;i++){
+                if(arr[i]==str) {
+                    count++;
+                }
+            }
+            if(count==0) {
+                return -1;
+            }
+            return `So lan xuat hien la : ${count}`;
+        }
+    </script>
+</body>
+
+</html>
