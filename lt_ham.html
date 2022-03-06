@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="submit" value="bai1" onclick="alertMessage()" />
+    <input type="submit" value="bai2" onclick="bai2(3)" />
+    <input type="submit" value="bai3" onclick="bai3(7,5)" />
+    <input type="submit" value="bai4" onclick="result = 0;alert(result);result = bai4();" />
+    <input type="submit" value="bai5" onclick="bai5('Regulus')" />
+
+    <script>
+        const alertMessage = () => {
+            alert("Xin chào!")
+        }
+
+        const bai2 = (number) => {
+            alert(`giá trị sau khi tăng:${number + 1}`);
+        }
+
+        const bai3 = (number1, number2) => {
+            if (number1 > number2) {
+                alert(`number1 lớn hơn number2!`);
+            }
+            else alert(`tong cua hai so la:${number1 + number2}`);
+        }
+
+
+        const bai4 = (number1, number2) => {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            alert(result);
+            // return result;
+        }
+
+
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+        const bai5 = (str) => {
+            let i;
+            for (i = 0; i < star.length; i++) {
+                if(star[i]==str) {
+                    alert(`chòm sao tương ứng là:${constellation[i]}`);
+                    break;
+                }
+            }
+            if(i==star.length) {
+                alert("không tìm thấy ngôi sao bạn muốn tìm!!");
+            }
+        }
+    </script>
+</body>
+
+</html>
