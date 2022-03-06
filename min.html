@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+
+        const minArr=(arr1) => {
+            let min=arr1[0];
+            let index=0;
+            if(arr1.length==0) {
+                alert (-1);  
+                return;       
+            };
+            for(let i=1;i<arr1.length;i++) {
+                    if(arr1[i]<min) {
+                        min=arr1[i];
+                        index=i;    
+                    }
+            }
+            alert(`${min}  index:${index}`);
+        }
+        minArr(arr);
+    </script>
+</body>
+
+</html>
